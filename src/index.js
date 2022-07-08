@@ -22,26 +22,26 @@ export const school = {
   },
   get aGradeStudents() {
     return Object.values(this.students)
-      .filter((item) => item.averageGrade >= 90)
+      .filter(({ averageGrade }) => averageGrade >= 90)
       .map(({ name }) => name)
       .join(', ');
   },
   get bGradeStudents() {
     return Object.values(this.students)
-      .filter((item) => item.averageGrade >= 75 && item.averageGrade <= 89)
+      .filter(({ averageGrade }) => averageGrade >= 75 && averageGrade <= 89)
       .map(({ name }) => name)
       .join(', ');
   },
   get cGradeStudents() {
     return Object.values(this.students)
-      .filter((item) => item.averageGrade >= 60 && item.averageGrade <= 74)
+      .filter(({ averageGrade }) => averageGrade >= 60 && averageGrade <= 74)
       .map(({ name }) => name)
       .join(', ');
   },
 
   get dGradeStudents() {
     return Object.values(this.students)
-      .filter((item) => item.averageGrade <= 59)
+      .filter(({ averageGrade }) => averageGrade <= 59)
       .map(({ name }) => name)
       .join(', ');
   },
