@@ -41,7 +41,7 @@ export const school = {
 
   get dGradeStudents() {
     return Object.values(this.students)
-      .filter((item) => item.averageGrade >= 0 && item.averageGrade <= 59)
+      .filter((item) => item.averageGrade <= 59)
       .map(({ name }) => name)
       .join(', ');
   },
